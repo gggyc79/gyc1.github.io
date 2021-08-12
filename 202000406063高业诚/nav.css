@@ -1,0 +1,160 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #fff;
+    font-family: "Microsoft YaHei", "微软雅黑", "SimHei", "黑体", sans-serif;
+    font-weight: 400;
+    color: #454545;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.menu {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.toutu {
+    width: 100%;
+    height: 280px
+}
+
+.toutu img {
+    width: 100%;
+    height: 280px
+}
+
+.menu {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    height: 45px;
+    background-color: #ee2331;
+    background-image: linear-gradient(45deg, #ee5523, #ee2331);
+    overflow: hidden;
+}
+
+header {
+    background-color: #393C44;
+    background-image: linear-gradient(45deg, #393C44, #25272b);
+}
+
+.logo a {
+    display: block;
+    background: url(images/laoyoulogo.png) no-repeat center;
+    width: 125px;
+    height: 45px;
+    background-size: 100%;
+    flex-shrink: 0;
+}
+
+.nav-op li {
+    position: relative;
+    float: left;
+    margin: 0 1px;
+    padding: 0 20px 0 40px;
+    height: 100%;
+    line-height: 46px;
+    color: #B3B3B3;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-op .nav-khd:before {
+    background-image: url(images/phone.jpg);
+}
+
+.nav-op li:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 12px;
+    width: 28px;
+    height: 28px;
+}
+
+.nav-op li a {
+    color: #B3B3B3;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.nav-op .nav-ss:before {
+    background-image: url(images/sousuo.jpg);
+}
+
+.nav-op .nav-pd:before {
+    background-image: url(images/sangang.jpg);
+}
+
+.nav-op .nav-fx:before {
+    background-image: url(images/share.jpg);
+}
+
+.searchBar {
+    position: absolute;
+    right: 0;
+    width: 250px;
+    height: 68px;
+    padding: 15px 15px;
+    border-top: 3px solid #348CEC;
+    box-shadow: 0 2px 6px #ccc;
+    -moz-box-shadow: 0 2px 6px #ccc;
+    background-color: #FFF;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+#sbox {
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+#sbox-sub {
+    display: inline-block;
+    line-height: 32px;
+    background: url(/img/h-s-b.png) no-repeat center;
+    font-size: 0px;
+    height: 32px;
+    width: 40px;
+    margin-left: -40px;
+    cursor: pointer;
+    vertical-align: top;
+    border: 0 none;
+}

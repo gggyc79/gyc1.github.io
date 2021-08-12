@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎你，请先登陆！</title>
+    <style>
+      html {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            background: url(images/desert.jpg) no-repeat 0px 0px;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            -moz-background-size: 100% 100%;
+        }
+        
+
+        .box {
+            width: 390px;
+            height: 320px;
+            border: solid 1px #ddd;
+            background: #FFF;
+            position: absolute;
+            left: 50%;
+            top: 42%;
+            margin-left: -195px;
+            margin-top: -160px;
+            text-align: center;
+            background-color: rgba(75, 81, 95, 0.3);
+            box-shadow: 7px 7px 17px rgba(52, 56, 66, 0.5);
+            border-radius: 5px;
+        }
+        .input_box {
+            width: 350px;
+            padding-bottom: 15px;
+            margin:  auto;
+            overflow: hidden;
+        }
+        h4{
+            font-size: 20px;
+            padding-top: 40px;
+        }
+        p {
+            
+            color: azure;
+        }
+        .button{
+            border-color: cornsilk;
+            background-color: rgba(100, 149, 237, .7);
+            color: aliceblue;
+            border-style: hidden;
+            border-radius: 5px;
+            width: 100px;
+            height: 31px;
+            font-size: 16px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>欢迎你，请先登陆！</title>
+
+
+    </head>
+
+    <body>
+        <div class="box">
+            <h4>LOGIN IN</h4>
+
+            <div class="input_box">
+                <P>User Name:&nbsp&nbsp<input id="uname" type="text" name="user" placeholder="请输入用户名"></P>
+            </div>
+            <div class="input_box">
+                <p>Password:&nbsp&nbsp<input id="upass" type="password" name="psw" placeholder="请输入密码"></p>
+            </div>
+            <div id="error_box"><br></div>
+            <div class="input_box">
+                <button type="button" class="button" onclick="fnLogin()">登陆</button>
+                <a href="注册表单.html"><input type="button" class="button" name="regist" value="注册" onclick="dianji"></a>
+                <a href="首页.html"><input type="button" value="返回首页" class="button"></a>
+            </div>
+
+
+
+        </div>
+    </body>
+
+    </html>
+
+
+    <script>
+        function fnLogin() {
+            var oUname = document.getElementById("uname")
+            var oUpass = document.getElementById("upass")
+            var oError = document.getElementById("error_box")
+            var isError = true;
+            if (oUname.value.length > 20 || oUname.value.length < 6) {
+                oError.innerHTML = "用户名请输入6-20位字符";
+                isError = false;
+                return;
+            } else if ((oUname.value.charCodeAt(0) >= 48) && (oUname.value.charCodeAt(0) <= 57)) {
+                oError.innerHTML = "首字符必须为字母";
+                return;
+            } else
+                for (var i = 0; i < oUname.value.charCodeAt(i); i++) {
+                    if ((oUname.value.charCodeAt(i) < 48) || (oUname.value.charCodeAt(i) > 57) && (oUname.value
+                            .charCodeAt(i) < 97) || (oUname.value.charCodeAt(i) > 122)) {
+                        oError.innerHTML = "必须为字母跟数字组成";
+                        return;
+                    }
+                }
+
+            if (oUpass.value!=123456 || oUname.value!='gaoyecheng') {
+                alert('账号或密码错误！请重新输入')
+                isError = false;
+                return;
+            }
+            window.alert("登录成功，即将为你服务!");
+            window.location.href = '首页.html';}
+
+    </script>
+
+
+    </div>
+</body>
+
+</html>

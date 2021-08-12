@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家乡美景</title>
+    <style>
+        body {
+            background: url(images/meijingbc.jpg);
+            background-size: 100%;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /*设置主容器的布局方式为相对布局*/
+        #container {
+            position: relative;
+        }
+
+        /*设置盒子的内边距、浮动属性*/
+        .box {
+            padding: 5px;
+            float: left;
+        }
+
+        /*设置图片容器的内边距、边框、阴影、圆角*/
+        .box_img {
+            padding: 5px;
+            border: 5px solid #cccccc;
+            box-shadow: 0 0 5px #cccccc;
+            border-radius: 5px;
+        }
+
+        /*设置图片的宽度和高度*/
+        .box_img img {
+            width: 400px;
+            height: auto;
+        }
+
+        /*设置图片名称段落文本的颜色、水平对齐方式*/
+        .img_name {
+            color: darkred;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing2.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing2.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing3.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing4.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing5.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing6.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing7.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing8.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing9.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing10.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing11.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing12.jpg">
+
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing13.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing14.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing15.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing16.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing17.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing18.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing19.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/meijing20.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/naning1.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/naning2.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/nanning.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/nanning.jpg">
+
+            </div>
+        </div>
+        <div class="box">
+            <div class="box_img">
+                <img src="images/nanning3.jpg">
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        window.onload = function () {
+            imgLocation("container", "box");
+            var imgData = {
+                "data": [{
+                    "src": "1.jpg"
+                }, {
+                    "src": "2.jpg"
+                }, {
+                    "src": "3.jpg"
+                }, {
+                    "src": "4.jpg"
+                }, {
+                    "src": "5.jpg"
+                }]
+            };
+            /*为窗口添加滚动条事件*/
+            window.onscroll = function () {
+                if (checkFlag()) {
+                    //alert("hello");
+                    loadImage(imgData)
+                }
+            }
+        }
+
+        /*图片按指定规则排列*/
+        function imgLocation(parent, content) {
+            /*将parent下的所有的content全部取出*/
+            var cparent = document.getElementById(parent);
+            var ccontent = getChildElement(cparent, content);
+            //console.log(ccontent);
+            var imgWidth = ccontent[0].offsetWidth;
+            var num = Math.floor(document.documentElement.clientWidth / imgWidth);
+            cparent.style.cssText = "Width:" + imgWidth * num + "px; margin:0px auto";
+
+            var BoxHeightArr = [];
+            for (var i = 0; i < ccontent.length; i++) {
+                if (i < num) {
+                    //BoxHeightArr.push(ccontent[i].offsetHeight);
+                    BoxHeightArr[i] = ccontent[i].offsetHeight;
+                    console.log(BoxHeightArr[i]);
+                } else {
+                    var minHeight = Math.min.apply(null, BoxHeightArr);
+                    //console.log(minHeight);
+                    var minIndex = getminheightLocation(BoxHeightArr, minHeight);
+                    ccontent[i].style.position = "absolute";
+                    ccontent[i].style.top = minHeight + "px";
+                    ccontent[i].style.left = ccontent[minIndex].offsetLeft + "px";
+                    BoxHeightArr[minIndex] += ccontent[i].offsetHeight;
+                }
+            }
+        }
+
+        /*自动加载图片*/
+        function loadImage(imgData) {
+            var cparent = document.getElementById("container");
+            for (var i = 0; i < imgData.data.length; i++) {
+                var ccontent = document.createElement("div");
+                ccontent.className = "box";
+                cparent.appendChild(ccontent);
+                var box_img = document.createElement("div");
+                box_img.className = "box_img";
+                ccontent.appendChild(box_img);
+                var img = document.createElement("img");
+                img.src = "image/" + imgData.data[i].src;
+                var p = document.createElement("p");
+                p.className = "img_name";
+                p.innerText = imgData.data[i].src;
+                box_img.appendChild(img);
+                box_img.appendChild(p);
+            }
+            imgLocation("container", "box");
+        }
+
+
+        /*得到最小高度所在索引*/
+        function getminheightLocation(BoxHeightArr, minHeight) {
+            for (var i in BoxHeightArr) {
+                if (BoxHeightArr[i] == minHeight) {
+                    return i;
+                }
+            }
+        }
+
+        /*得到parent中的所有content子对象*/
+        function getChildElement(parent, content) {
+            var contentArr = [];
+            var allcontent = parent.getElementsByTagName("*");
+            for (var i = 0; i < allcontent.length; i++) {
+                if (allcontent[i].className == content) {
+                    contentArr.push(allcontent[i]);
+                }
+            }
+            return contentArr;
+        }
+    </script>
+</body>
+
+</html>
